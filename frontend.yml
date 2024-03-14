@@ -2,10 +2,10 @@
   hosts: all
   become: true
   tasks:
-   - name: Install Nginx
-     ansible.builtin.dnf:
-      name: nginx
-      state: latest
+    - name: Install Nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: latest
 
 #- hosts: all  # Replace with your target group or hosts.
 #  become: true  # Requires elevated privileges
