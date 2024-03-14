@@ -10,7 +10,7 @@
     - name: Just force systemd to reload system daemon
       ansible.builtin.systemd_service:
         name: mysqld
-        state: start
+        state: started
         enabled: yes
 
     - name: Ensure no user named 'sally'@'localhost' exists, also passing in the auth credentials
