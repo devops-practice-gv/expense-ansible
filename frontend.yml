@@ -1,8 +1,25 @@
 - name: Frontend Setup
   hosts: all
   become: true
+#  tasks:
+#   - name: Install Nginx
+#     ansible.builtin.dnf:
+#     name: nginx
+#     state: latest
+#
+#- hosts: all  # Replace with your target group or hosts
+#  become: true  # Requires elevated privileges
+
   tasks:
-   - name: Install Nginx
-     ansible.builtin.dnf:
-     name: nginx
-     state: latest
+    - name: Install nginx package
+      dnf:
+        name: nginx
+        state: present
+      # Optional: Update package cache before installation
+      # cache_valid: no
+
+    - name: Start and enable nginx service
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
