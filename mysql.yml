@@ -1,7 +1,7 @@
 - name: Install MySQL Server 8.0.x
   hosts: all
   become: true
-  task:
+  tasks:
     - name: Install MySQL Server 8.0.x
       ansible.builtin.dnf:
         name: mysql-server
