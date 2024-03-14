@@ -7,7 +7,7 @@
       name: nginx
       state: latest
 
-#- hosts: all  # Replace with your target group or hosts
+#- hosts: all  # Replace with your target group or hosts.
 #  become: true  # Requires elevated privileges
 
 #  tasks:
