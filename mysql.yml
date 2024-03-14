@@ -11,7 +11,7 @@
       ansible.builtin.systemd_service:
         name: mysqld
         state: start
-        enable: yes
+        enabled: yes
 
     - name: Ensure no user named 'sally'@'localhost' exists, also passing in the auth credentials
       community.mysql.mysql_user:
