@@ -6,6 +6,11 @@
       ansible.builtin.dnf:
         name: nginx
         state: latest
+    - name: Start and enable nginx service
+      systemd:
+        name: nginx
+        state: started
+#            enabled: yes
 
 #- hosts: all  # Replace with your target group or hosts.
 #  become: true  # Requires elevated privileges
