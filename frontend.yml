@@ -6,25 +6,29 @@
       ansible.builtin.dnf:
         name: nginx
         state: latest
+
+    - name: Copy expense Nginx configuration
+      ansible.builtin.copy:
+        src: expense.conf
+        dest: /etc/nginx/default.d/expense.conf
+
+    - name:  remove directory
+      ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: absent
+
+    - name: Create directory
+      ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: directory
+
+    - name: Download and exttract app content
+      ansible.builtin.unarchive:
+        src: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
+        dest: /usr/share/nginx/html
+        remote_src: yes
+
     - name: Start and enable nginx service
       systemd:
         name: nginx
         state: started
-#            enabled: yes
-
-#- hosts: all  # Replace with your target group or hosts.
-#  become: true  # Requires elevated privileges
-
-#  tasks:
-#    - name: Install nginx package
-#      dnf:
-#        name: nginx
-#        state: present
-#      # Optional: Update package cache before installation
-#      # cache_valid: no
-#
-#    - name: Start and enable nginx service
-#      systemd:
-#        name: nginx
-#        state: started
-#        enabled: yes
