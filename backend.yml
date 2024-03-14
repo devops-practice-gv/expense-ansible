@@ -62,5 +62,5 @@
       ansible.builtin.systemd_service:
         name: backend
         state: restart
-        enable: yes
+        enabled: yes
         daemon_reload: true
