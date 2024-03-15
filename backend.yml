@@ -60,7 +60,7 @@
         login_password: ExpenseApp@1
         login_host: mysql.dev.makemyhomesmart.co.uk
 
-    - name: Just force systemd to reload system daemon
+    - name: Start systemd to reload system
       ansible.builtin.systemd_service:
         name: backend
         state: restarted
