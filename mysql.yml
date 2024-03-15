@@ -15,6 +15,6 @@
 
     - name: Ensure no user named 'sally'@'localhost' exists, also passing in the auth credentials
       community.mysql.mysql_user:
-        login_user: root
-        login_password: ExpenseApp@1
+        name: root
+        password: ExpenseApp@1
 
