@@ -53,7 +53,7 @@
     target: /app/schema/backend.sql
     login_user: root
     login_password: ExpenseApp@1
-    login_host: mysql.dev.makemyhomesmart.co.uk
+    login_host: mysql-dev.makemyhomesmart.co.uk
 
 - name: Start systemd to reload system
   ansible.builtin.systemd_service:
