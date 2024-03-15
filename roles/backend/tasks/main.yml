@@ -35,7 +35,7 @@
     state: latest
 
 - name: Copy backend service configuration
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: backend.service
     dest: /etc/systemd/system/backend.service
 
