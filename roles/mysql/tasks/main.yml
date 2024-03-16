@@ -12,10 +12,11 @@
 - name: Check if password exists
   ansible.builtin.shell: echo 'show databases' |  mysql -h mysql-dev.makemyhomesmart.co.uk -uroot -pExpenseApp@1
   register: check1
+  ignore_errors: yes
 
-- name: Debug
-  ansible.builtin.debug:
-    msg: "{{ check1 }}"
+#- name: Debug
+#  ansible.builtin.debug:
+#    msg: "{{ check1 }}"
 
 - name: Setup MySql Password
   ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
