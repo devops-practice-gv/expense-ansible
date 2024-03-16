@@ -1,0 +1,2 @@
+- name: Set Prompt with Components
+  ansible.builtin.shell: set-prompt {{ component }}

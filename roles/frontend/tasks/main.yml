@@ -3,7 +3,7 @@
     name: nginx
     state: latest
 
-- name: Copy expense Nginx configuration
+- name: Copy expense Nginx configuration (using template now)
   ansible.builtin.template:
     src: expense.conf
     dest: /etc/nginx/default.d/expense.conf

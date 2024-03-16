@@ -1,3 +1,5 @@
+
+
 - name: Disable current nodejs
   ansible.builtin.shell: dnf module disable nodejs -y
 
@@ -23,7 +25,7 @@
     path: /app
     state: latest
 
-- name: Copy backend service configuration
+- name: Copy backend service configuration (using Template now)
   ansible.builtin.template:
     src: backend.service
     dest: /etc/systemd/system/backend.service
