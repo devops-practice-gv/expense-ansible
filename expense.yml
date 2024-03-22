@@ -3,3 +3,8 @@
   become: true
   roles:
     - "{{ role_name }}"
+
+
+# This is how you call ansible front he workstation server:
+# ansible-playbook -i frontend-dev.makemyhomesmart.co.uk. -e ansible-user=ec3user -e ansible-password=DevOps321 -e env=dev -e role_name=frontend expense.yml
+# remember the coma after the url name
