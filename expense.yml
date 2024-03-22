@@ -6,5 +6,5 @@
 
 
 # This is how you call ansible front he workstation server:
-# ansible-playbook -i frontend-dev.makemyhomesmart.co.uk. -e ansible-user=ec3user -e ansible-password=DevOps321 -e env=dev -e role_name=frontend expense.yml
-# remember the coma after the url name
+# ansible-playbook -i frontend-dev.makemyhomesmart.co.uk. -e ansible_user=ec3user -e ansible_password=DevOps321 -e env=dev -e role_name=frontend expense.yml
+# remember the coma after the url name. also remember that there is a underscore in the parameter key
