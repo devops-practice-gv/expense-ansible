@@ -3,8 +3,8 @@ pipelines:
   mysql:
     group: defaultGroup
     materials:
-      git-da613e5:
-        git: https://github.com/raghudevopsb78/expense-ansible.git
+      git-8e5959a:
+        git: https://github.com/devops-practice-gv/expense-ansible.git
         shallow_clone: false
         auto_update: true
         branch: main
